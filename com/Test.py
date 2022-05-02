@@ -10,6 +10,9 @@ import time
 
 # 다나와 사이트 검색
 
+# 임시 코드
+searchKeyword = input()
+
 options = Options()
 options.add_argument('headless');
 
@@ -19,8 +22,7 @@ driver = webdriver.Chrome(options=options)
 
 driver.implicitly_wait(5)
 
-driver.get('https://search.danawa.com/dsearch.php?query=RTX+3070')
-
+driver.get('https://search.danawa.com/dsearch.php?query='+searchKeyword)
 
 
 # bs4 초기화
