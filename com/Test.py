@@ -6,20 +6,23 @@ from selenium import webdriver
 import chromedriver_autoinstaller
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
+import json
 import time
 
 # 다나와 사이트 검색
 
+searchKeyword = input()
+searchAddress = 'https://search.danawa.com/dsearch.php?query='+searchKeyword
+
 options = Options()
 options.add_argument('headless');
-
 
 chromedriver_autoinstaller.install()
 driver = webdriver.Chrome(options=options)
 
 driver.implicitly_wait(5)
 
-driver.get('https://search.danawa.com/dsearch.php?query=RTX+3070')
+driver.get(searchAddress)
 
 
 
@@ -44,3 +47,5 @@ for v in goods_list:
 
 # 브라우저 종료
 driver.close()
+
+print(searchAddress)
