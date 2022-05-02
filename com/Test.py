@@ -11,6 +11,7 @@ import time
 
 # 다나와 사이트 검색
 
+# 검색어 파이썬에서 입력 - 임시코드
 searchKeyword = input()
 searchAddress = 'https://search.danawa.com/dsearch.php?query='+searchKeyword
 
