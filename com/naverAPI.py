@@ -20,5 +20,6 @@ print(response.read().decode('utf-8'))
 
 df = pd.DataFrame(response)
 
+
 df[['title','lprice','mallName']]
 
